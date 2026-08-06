@@ -1,26 +1,31 @@
-# TechPaws
+# TechPaws 🐾
 
-Sitio web responsive con formulario y backend propio para enviar consultas mediante Gmail SMTP.
+Este es el sitio oficial de **TechPaws Microinformática**, mi proyecto de servicio técnico para PCs y notebooks.
 
-## Configuración en Vercel
+TechPaws nació para ofrecer soluciones claras, responsables y cercanas. La idea no es solamente reparar un equipo: también quiero que cada persona entienda qué problema tenía, qué trabajo se realizó y cómo puede cuidarlo mejor.
 
-Crear estas variables en **Project Settings → Environment Variables**:
+## ¿Qué hago?
 
-- `SMTP_USER`: `pawstech5@gmail.com`
-- `SMTP_PASS`: una contraseña de aplicación de Gmail nueva, sin espacios
-- `CONTACT_EMAIL`: `pawstech5@gmail.com`
+- Reparación y mantenimiento de PCs y notebooks.
+- Optimización y limpieza de equipos lentos.
+- Instalación y actualización de Windows y programas.
+- Reemplazo de discos HDD por SSD y ampliación de memoria RAM.
+- Eliminación de virus, malware y publicidad no deseada.
+- Configuración de impresoras y periféricos.
+- Recuperación y respaldo de información.
+- Soporte técnico remoto y atención a domicilio.
 
-No guardar la contraseña en GitHub ni en archivos del proyecto. Si una contraseña fue compartida, revocarla y generar otra.
+Trabajo con diagnóstico sin cargo, presupuesto sin compromiso y garantía por escrito.
 
-## Desarrollo local
+## Los precursores
 
-Requiere Node.js 22.13 o superior.
+La identidad de TechPaws está inspirada en quienes acompañaron el comienzo de este proyecto: nuestros cinco precursores. Ellos representan la paciencia, la lealtad, la curiosidad, la energía y la dedicación que quiero transmitir en cada trabajo.
 
-```bash
-npm install
-npm run dev
-```
+## Contacto
 
-## Despliegue
+- **WhatsApp:** [+54 11 3819-1431](https://wa.me/541138191431)
+- **Email:** [pawstech5@gmail.com](mailto:pawstech5@gmail.com)
 
-Vercel detecta Next.js automáticamente. No hace falta configurar el comando de compilación: utiliza `npm run build`.
+---
+
+Hecho con dedicación, responsabilidad y pasión por la tecnología. 💙

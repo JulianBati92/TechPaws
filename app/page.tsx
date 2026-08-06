@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       <section className="about section" id="nosotros">
-        <div className="about-card"><div className="about-mark"><img src="/logo-techpaws.png" alt="Logo oficial de TechPaws con todos sus precursores" /></div><div><p className="kicker">/ 03 SOBRE TECHPAWS</p><h2>Tecnología que vuelve a acompañarte.</h2><p>En TechPaws creemos que reparar bien también es comunicar bien. Revisamos tu equipo, te contamos qué encontramos y acordamos la solución antes de avanzar. Sin tecnicismos innecesarios ni sorpresas.</p><div className="modes"><span><b>⌂</b> Atención a domicilio</span><span><b>⌁</b> Servicio remoto</span></div></div></div>
+        <div className="about-card"><div className="about-mark"><img src="/carousel-identidad.png" alt="Los cinco precursores de TechPaws" /></div><div><p className="kicker">/ 03 SOBRE TECHPAWS</p><h2>Tecnología que vuelve a acompañarte.</h2><p>TechPaws es mi proyecto de servicio técnico para PCs y notebooks. Nació para ofrecer soluciones claras, responsables y cercanas: no solamente reparar un equipo, sino también explicar qué problema tenía, qué trabajo se realizó y cómo cuidarlo mejor.</p><p>Su identidad está inspirada en quienes acompañaron el comienzo de este proyecto: nuestros cinco precursores. Ellos representan la paciencia, la lealtad, la curiosidad, la energía y la dedicación que quiero transmitir en cada trabajo.</p><div className="precursor-values"><span>Paciencia</span><span>Lealtad</span><span>Curiosidad</span><span>Energía</span><span>Dedicación</span></div><div className="modes"><span><b>⌂</b> Atención a domicilio</span><span><b>⌁</b> Servicio remoto</span></div></div></div>
       </section>
 
       <section className="contact section" id="contacto">
