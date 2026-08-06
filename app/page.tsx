@@ -1,4 +1,5 @@
 import ContactForm from "./components/ContactForm";
+import MotionEffects from "./components/MotionEffects";
 
 const services = [
   { n: "01", title: "Reparación de PC y notebooks", text: "Diagnóstico y solución de fallas de hardware y software, con explicación clara del trabajo." },
@@ -20,11 +21,13 @@ function PawMark() {
   return <span className="paw" aria-hidden="true"><i /><i /><i /><i /><b /></span>;
 }
 
+function BrandIcon() { return <span className="brand-mascot" aria-hidden="true" />; }
+
 export default function Home() {
   return (
-    <main>
+    <main><MotionEffects />
       <header className="nav-shell">
-        <a className="brand" href="#inicio" aria-label="TechPaws, inicio"><PawMark /><span>TECH<em>PAWS</em></span></a>
+        <a className="brand" href="#inicio" aria-label="TechPaws, inicio"><BrandIcon /><span>TECH<em>PAWS</em></span></a>
         <nav aria-label="Navegación principal">
           <a href="#servicios">Servicios</a><a href="#beneficios">Beneficios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
         </nav>
@@ -44,7 +47,7 @@ export default function Home() {
         </div>
         <div className="hero-art" aria-hidden="true">
           <div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="glow" />
-          <div className="big-paw"><PawMark /></div>
+          <div className="tech-visual"><img src="/techpaws-hero.png" alt="Computadoras y mascota de TechPaws" /></div>
           <span className="status"><i /> SOPORTE ACTIVO</span>
           <span className="code">SYS.OK<br />TP_2026</span>
         </div>
