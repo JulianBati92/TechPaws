@@ -1,3 +1,5 @@
+import ContactForm from "./components/ContactForm";
+
 const services = [
   { n: "01", title: "Reparación de PC y notebooks", text: "Diagnóstico y solución de fallas de hardware y software, con explicación clara del trabajo." },
   { n: "02", title: "Optimización y mantenimiento", text: "Limpieza, puesta a punto y mejoras para que tu equipo vuelva a responder como esperás." },
@@ -13,8 +15,6 @@ const benefits = [
   ["Presupuesto", "sin compromiso"],
   ["Atención", "a domicilio"],
 ];
-
-const formEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/REEMPLAZAR_ID";
 
 function PawMark() {
   return <span className="paw" aria-hidden="true"><i /><i /><i /><i /><b /></span>;
@@ -77,13 +77,7 @@ export default function Home() {
           </div>
           <div className="payments"><span>MEDIOS DE PAGO</span><p>Efectivo&nbsp;&nbsp;·&nbsp;&nbsp; Transferencia&nbsp;&nbsp;·&nbsp;&nbsp; Mercado Pago</p></div>
         </div>
-        <form className="contact-form" action={formEndpoint} method="POST">
-          <input type="hidden" name="_subject" value="Nueva consulta desde TechPaws" />
-          <div className="field-row"><label>Nombre<input name="nombre" required placeholder="Tu nombre" autoComplete="name" /></label><label>Email<input type="email" name="email" required placeholder="tu@email.com" autoComplete="email" /></label></div>
-          <div className="field-row"><label>Teléfono<input type="tel" name="telefono" required placeholder="11 1234 5678" autoComplete="tel" /></label><label>Tipo de servicio<select name="servicio" required defaultValue=""><option value="" disabled>Seleccionar</option><option>Reparación de PC o notebook</option><option>Optimización y mantenimiento</option><option>Instalación de Windows y programas</option><option>Eliminación de virus</option><option>Actualización de componentes</option><option>Recuperación y respaldo de datos</option><option>Otro</option></select></label></div>
-          <label>Descripción breve<textarea name="descripcion" required rows={5} placeholder="Contanos qué problema tiene tu equipo..." /></label>
-          <button type="submit">Enviar consulta <span>↗</span></button><p className="form-note">Al enviar, aceptás que te contactemos para responder tu consulta.</p>
-        </form>
+        <ContactForm />
       </section>
 
       <footer><a className="brand" href="#inicio"><PawMark /><span>TECH<em>PAWS</em></span></a><p>Servicio técnico de PC y notebooks.</p><div><a href="https://wa.me/541138191431">WhatsApp</a><a href="mailto:pawstech5@gmail.com">Email</a><a href="#inicio">Volver arriba ↑</a></div><small>© 2026 TECHPAWS · TODOS LOS DERECHOS RESERVADOS</small></footer>

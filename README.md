@@ -1,24 +1,26 @@
 # TechPaws
 
-Sitio web responsive para el servicio técnico TechPaws.
+Sitio web responsive con formulario y backend propio para enviar consultas mediante Gmail SMTP.
 
-## Formulario de contacto
+## Configuración en Vercel
 
-1. Crear un formulario gratuito en https://formspree.io/ usando `pawstech5@gmail.com`.
-2. Copiar `.env.example` como `.env.local`.
-3. Reemplazar `TU_ID_DE_FORMULARIO` por el identificador entregado por Formspree.
+Crear estas variables en **Project Settings → Environment Variables**:
 
-En Vercel, agregar la misma variable `NEXT_PUBLIC_FORMSPREE_ENDPOINT` en la configuración del proyecto antes de desplegar.
+- `SMTP_USER`: `pawstech5@gmail.com`
+- `SMTP_PASS`: una contraseña de aplicación de Gmail nueva, sin espacios
+- `CONTACT_EMAIL`: `pawstech5@gmail.com`
 
-## Desarrollo
+No guardar la contraseña en GitHub ni en archivos del proyecto. Si una contraseña fue compartida, revocarla y generar otra.
+
+## Desarrollo local
 
 Requiere Node.js 22.13 o superior.
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 ## Despliegue
 
-Importar la carpeta en Vercel, agregar la variable del formulario y publicar.
+Vercel detecta Next.js automáticamente. No hace falta configurar el comando de compilación: utiliza `npm run build`.
