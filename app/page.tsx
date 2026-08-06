@@ -1,5 +1,6 @@
 import ContactForm from "./components/ContactForm";
 import MotionEffects from "./components/MotionEffects";
+import HeroCarousel from "./components/HeroCarousel";
 
 const services = [
   { n: "01", title: "Reparación de PC y notebooks", text: "Diagnóstico y solución de fallas de hardware y software, con explicación clara del trabajo." },
@@ -45,12 +46,7 @@ export default function Home() {
             <a className="text-link" href="#servicios">Ver servicios <span>↓</span></a>
           </div>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="glow" />
-          <div className="tech-visual"><img className="tech-scene" src="/techpaws-hero.png" alt="Computadoras y servicio técnico TechPaws" /><img className="hero-logo" src="/logo-techpaws.png" alt="Logo TechPaws con todos sus precursores" /></div>
-          <span className="status"><i /> SOPORTE ACTIVO</span>
-          <span className="code">SYS.OK<br />TP_2026</span>
-        </div>
+        <div className="hero-art"><HeroCarousel /></div>
         <div className="hero-foot"><span>DOMICILIO</span><span>REMOTO</span><span>GARANTÍA ESCRITA</span></div>
       </section>
 
