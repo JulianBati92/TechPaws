@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./animations.css";
+import "./responsive-fixes.css";
 
 export const metadata: Metadata = {
   title: "TechPaws | Reparación de PC y notebooks",

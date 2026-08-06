@@ -21,7 +21,7 @@ function PawMark() {
   return <span className="paw" aria-hidden="true"><i /><i /><i /><i /><b /></span>;
 }
 
-function BrandIcon() { return <span className="brand-mascot" aria-hidden="true" />; }
+function BrandIcon() { return <span className="brand-mascot" aria-hidden="true"><img src="/logo-techpaws.png" alt="" /></span>; }
 
 export default function Home() {
   return (
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         <div className="hero-art" aria-hidden="true">
           <div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="glow" />
-          <div className="tech-visual"><img src="/techpaws-hero.png" alt="Computadoras y mascota de TechPaws" /></div>
+          <div className="tech-visual"><img className="tech-scene" src="/techpaws-hero.png" alt="Computadoras y servicio técnico TechPaws" /><img className="hero-logo" src="/logo-techpaws.png" alt="Logo TechPaws con todos sus precursores" /></div>
           <span className="status"><i /> SOPORTE ACTIVO</span>
           <span className="code">SYS.OK<br />TP_2026</span>
         </div>
@@ -57,7 +57,7 @@ export default function Home() {
       <section className="section services" id="servicios">
         <div className="section-head"><div><p className="kicker">/ 01 SERVICIOS</p><h2>Todo lo que tu<br />equipo necesita.</h2></div><p>Soluciones para trabajar, estudiar y disfrutar sin interrupciones. Evaluamos cada caso antes de recomendarte qué hacer.</p></div>
         <div className="service-grid">
-          {services.map((service) => <article className="service-card" key={service.n}><span>{service.n}</span><div className="service-icon">＋</div><h3>{service.title}</h3><p>{service.text}</p><a href="#contacto" aria-label={`Consultar por ${service.title}`}>Consultar <b>↗</b></a></article>)}
+          {services.map((service) => <article className="service-card" key={service.n}><span>{service.n}</span><div className="service-icon" aria-hidden="true">+</div><h3>{service.title}</h3><p>{service.text}</p><a href="#contacto" aria-label={`Consultar por ${service.title}`}>Consultar <b>↗</b></a></article>)}
         </div>
       </section>
 
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       <section className="about section" id="nosotros">
-        <div className="about-card"><div className="about-mark"><PawMark /></div><div><p className="kicker">/ 03 SOBRE TECHPAWS</p><h2>Tecnología que vuelve a acompañarte.</h2><p>En TechPaws creemos que reparar bien también es comunicar bien. Revisamos tu equipo, te contamos qué encontramos y acordamos la solución antes de avanzar. Sin tecnicismos innecesarios ni sorpresas.</p><div className="modes"><span><b>⌂</b> Atención a domicilio</span><span><b>⌁</b> Servicio remoto</span></div></div></div>
+        <div className="about-card"><div className="about-mark"><img src="/logo-techpaws.png" alt="Logo oficial de TechPaws con todos sus precursores" /></div><div><p className="kicker">/ 03 SOBRE TECHPAWS</p><h2>Tecnología que vuelve a acompañarte.</h2><p>En TechPaws creemos que reparar bien también es comunicar bien. Revisamos tu equipo, te contamos qué encontramos y acordamos la solución antes de avanzar. Sin tecnicismos innecesarios ni sorpresas.</p><div className="modes"><span><b>⌂</b> Atención a domicilio</span><span><b>⌁</b> Servicio remoto</span></div></div></div>
       </section>
 
       <section className="contact section" id="contacto">
@@ -83,7 +83,7 @@ export default function Home() {
         <ContactForm />
       </section>
 
-      <footer><a className="brand" href="#inicio"><PawMark /><span>TECH<em>PAWS</em></span></a><p>Servicio técnico de PC y notebooks.</p><div><a href="https://wa.me/541138191431">WhatsApp</a><a href="mailto:pawstech5@gmail.com">Email</a><a href="#inicio">Volver arriba ↑</a></div><small>© 2026 TECHPAWS · TODOS LOS DERECHOS RESERVADOS</small></footer>
+      <footer><a className="brand" href="#inicio"><BrandIcon /><span>TECH<em>PAWS</em></span></a><p>Servicio técnico de PC y notebooks.</p><div><a href="https://wa.me/541138191431">WhatsApp</a><a href="mailto:pawstech5@gmail.com">Email</a><a href="#inicio">Volver arriba ↑</a></div><small>© 2026 TECHPAWS · TODOS LOS DERECHOS RESERVADOS</small></footer>
       <a className="floating-wa" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda" target="_blank" rel="noreferrer" aria-label="Contactar a TechPaws por WhatsApp">✦</a>
     </main>
   );
