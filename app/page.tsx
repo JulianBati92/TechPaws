@@ -22,6 +22,10 @@ function PawMark() {
   return <span className="paw" aria-hidden="true"><i /><i /><i /><i /><b /></span>;
 }
 
+function ContactPawIcon() {
+  return <span className="contact-paw-icon" aria-hidden="true"><PawMark /></span>;
+}
+
 function BrandIcon() { return <span className="brand-mascot" aria-hidden="true"><img src="/logo-techpaws.png" alt="" /></span>; }
 
 export default function Home() {
@@ -70,7 +74,7 @@ export default function Home() {
       <section className="contact section" id="contacto">
         <div className="contact-info"><p className="kicker">/ 04 CONTACTO</p><h2>Contanos qué<br />le pasa a tu equipo.</h2><p>Respondemos tu consulta y coordinamos el diagnóstico. Sin cargo y sin compromiso.</p>
           <div className="contact-list">
-            <a className="whatsapp-contact" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda%20con%20mi%20equipo" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp de TechPaws"><span className="wa-icon" aria-hidden="true">☎</span><strong>+54 11 3819-1431</strong></a>
+            <a className="whatsapp-contact" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda%20con%20mi%20equipo" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp de TechPaws"><ContactPawIcon /><strong>+54 11 3819-1431</strong></a>
             <a href="mailto:pawstech5@gmail.com"><span>EMAIL</span><strong>pawstech5@gmail.com</strong></a>
             <div><span>MODALIDAD</span><strong>A domicilio · Remoto</strong></div>
           </div>
@@ -80,7 +84,7 @@ export default function Home() {
       </section>
 
       <footer><a className="brand" href="#inicio"><BrandIcon /><span>TECH<em>PAWS</em></span></a><p>Servicio técnico de PC y notebooks.</p><div><a href="/seguimiento">Seguir mi orden</a><a href="https://wa.me/541138191431">WhatsApp</a><a href="mailto:pawstech5@gmail.com">Email</a><a href="#inicio">Volver arriba ↑</a></div><small>© 2026 TECHPAWS · TODOS LOS DERECHOS RESERVADOS</small></footer>
-      <a className="floating-wa" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda" target="_blank" rel="noreferrer" aria-label="Contactar a TechPaws por WhatsApp"><span className="wa-icon" aria-hidden="true">☎</span></a>
+      <a className="floating-wa" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda" target="_blank" rel="noreferrer" aria-label="Contactar a TechPaws por WhatsApp"><ContactPawIcon /></a>
     </main>
   );
 }
