@@ -44,3 +44,5 @@ El proyecto está preparado para Vercel y utiliza Neon Postgres para guardar las
 - Consulta para clientes: `/seguimiento`
 
 Si un cliente olvida su número de orden, también puede consultar con el nombre y apellido exactos registrados y los últimos cuatro dígitos de su WhatsApp.
+
+Cada estado carga un mensaje sugerido que puede editarse antes de guardarlo. Las órdenes descartadas también pueden eliminarse definitivamente desde el panel; al hacerlo se borra su historial asociado.

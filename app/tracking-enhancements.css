@@ -3,3 +3,6 @@
 .tracking-tabs button.active{background:#10141b!important;color:#fff!important}
 .tracking-help{font-size:12px;line-height:1.5;color:#596272;margin:0}
 .tracking-form .tracking-submit{background:#2672ff;color:#fff}
+.order-actions .delete-order{margin-right:auto;background:transparent;color:#ff8f9a;border:1px solid #6b3038}
+.order-actions .delete-order:hover{background:#3a171c}
+@media(max-width:560px){.order-actions .delete-order{margin-right:0}}

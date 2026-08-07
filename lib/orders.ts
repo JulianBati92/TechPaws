@@ -89,6 +89,12 @@ export async function updateOrder(id: number, input: Pick<Order, "status" | "pub
   return rows[0];
 }
 
+export async function deleteOrder(id: number) {
+  await ensureSchema();
+  const rows = await database()`DELETE FROM orders WHERE id=${id} RETURNING id` as unknown as { id: number }[];
+  return Boolean(rows[0]);
+}
+
 export async function getPublicOrder(token: string) {
   await ensureSchema();
   const sql = database();
