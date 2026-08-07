@@ -29,3 +29,16 @@ La identidad de TechPaws está inspirada en quienes acompañaron el comienzo de 
 ---
 
 Hecho con dedicación, responsabilidad y pasión por la tecnología. 💙
+
+## Seguimiento de equipos
+
+La web incluye un espacio privado desde el que administro cada orden de servicio y un seguimiento para que cada cliente pueda ver el estado de su equipo con su número de orden y código personal.
+
+Los avisos se preparan automáticamente para enviarlos por WhatsApp. El mensaje incluye el estado actual, la última novedad y el enlace privado de seguimiento.
+
+### Puesta en marcha
+
+El proyecto está preparado para Vercel y utiliza Neon Postgres para guardar las órdenes. Las variables necesarias están detalladas en `.env.example`; las claves reales se cargan únicamente en Vercel y nunca se publican en GitHub.
+
+- Panel privado: `/admin`
+- Consulta para clientes: `/seguimiento`

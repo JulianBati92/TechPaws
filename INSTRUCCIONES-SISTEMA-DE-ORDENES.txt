@@ -1,0 +1,44 @@
+TECHPAWS — ACTIVAR EL SISTEMA DE ÓRDENES
+
+1. CREAR LA BASE GRATUITA
+
+- Entrá en https://console.neon.tech y creá una cuenta.
+- Elegí “New project”. Podés llamarlo TechPaws.
+- En el proyecto, presioná “Connect” y copiá el texto que comienza con postgresql://
+
+2. CONECTARLA EN VERCEL
+
+En tu proyecto de Vercel entrá en Settings > Environment Variables y agregá:
+
+DATABASE_URL
+Pegá el texto postgresql:// que copiaste de Neon.
+
+ADMIN_PASSWORD
+Elegí una clave larga y única para entrar al panel. No uses la clave del correo.
+
+AUTH_SECRET
+Escribí una combinación aleatoria de al menos 32 caracteres. Ejemplo de formato:
+una-frase-muy-larga-con-numeros-2026-privada
+
+Marcá Production, Preview y Development para las tres variables. Después hacé un nuevo Deploy.
+
+3. USARLO
+
+- Panel privado: https://TU-DOMINIO/admin
+- Consulta del cliente: https://TU-DOMINIO/seguimiento
+
+La primera vez que ingreses al panel, las tablas se crearán automáticamente.
+
+Cuando registres una orden, el sistema genera:
+
+- Número de orden.
+- Código privado de seis dígitos.
+- Enlace de seguimiento individual.
+
+Al cambiar un estado, guardá los cambios y presioná “Avisar por WhatsApp”. Se abrirá WhatsApp con el mensaje, estado, código y enlace ya preparados. Vos solamente confirmás el envío; esta modalidad no tiene costo mensual.
+
+IMPORTANTE
+
+- Nunca publiques DATABASE_URL, ADMIN_PASSWORD ni AUTH_SECRET en GitHub.
+- No cargues estas claves dentro de .env.example: ese archivo contiene ejemplos solamente.
+- Si una clave real fue publicada, reemplazala inmediatamente.

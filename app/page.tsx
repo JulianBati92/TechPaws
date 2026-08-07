@@ -30,7 +30,7 @@ export default function Home() {
       <header className="nav-shell">
         <a className="brand" href="#inicio" aria-label="TechPaws, inicio"><BrandIcon /><span>TECH<em>PAWS</em></span></a>
         <nav aria-label="Navegación principal">
-          <a href="#servicios">Servicios</a><a href="#beneficios">Beneficios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+          <a href="#servicios">Servicios</a><a href="#beneficios">Beneficios</a><a href="#nosotros">Nosotros</a><a href="/seguimiento">Mi orden</a><a href="#contacto">Contacto</a>
         </nav>
         <a className="nav-cta" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda%20con%20mi%20equipo" target="_blank" rel="noreferrer">Pedir diagnóstico <span>↗</span></a>
       </header>
@@ -79,7 +79,7 @@ export default function Home() {
         <ContactForm />
       </section>
 
-      <footer><a className="brand" href="#inicio"><BrandIcon /><span>TECH<em>PAWS</em></span></a><p>Servicio técnico de PC y notebooks.</p><div><a href="https://wa.me/541138191431">WhatsApp</a><a href="mailto:pawstech5@gmail.com">Email</a><a href="#inicio">Volver arriba ↑</a></div><small>© 2026 TECHPAWS · TODOS LOS DERECHOS RESERVADOS</small></footer>
+      <footer><a className="brand" href="#inicio"><BrandIcon /><span>TECH<em>PAWS</em></span></a><p>Servicio técnico de PC y notebooks.</p><div><a href="/seguimiento">Seguir mi orden</a><a href="https://wa.me/541138191431">WhatsApp</a><a href="mailto:pawstech5@gmail.com">Email</a><a href="#inicio">Volver arriba ↑</a></div><small>© 2026 TECHPAWS · TODOS LOS DERECHOS RESERVADOS</small></footer>
       <a className="floating-wa" href="https://wa.me/541138191431?text=Hola%20TechPaws%2C%20necesito%20ayuda" target="_blank" rel="noreferrer" aria-label="Contactar a TechPaws por WhatsApp"><span className="wa-icon" aria-hidden="true">☎</span></a>
     </main>
   );

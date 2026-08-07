@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import "./animations.css";
 import "./responsive-fixes.css";
 import "./carousel.css";
+import "./management.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000");
 const analyticsId = process.env.NEXT_PUBLIC_GA_ID;
@@ -40,11 +40,11 @@ const businessData = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="es"><body>{children}
-    <Script id="techpaws-business-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessData) }} />
+  return <html lang="es"><head>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessData) }} />
     {analyticsId && <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`} strategy="afterInteractive" />
-      <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${analyticsId}');` }} />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`} />
+      <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${analyticsId}');` }} />
     </>}
-  </body></html>;
+  </head><body>{children}</body></html>;
 }
