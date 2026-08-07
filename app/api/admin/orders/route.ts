@@ -15,6 +15,9 @@ export async function POST(request: Request) {
   if (!body || !body.customer_name?.trim() || !body.customer_phone?.trim() || !body.equipment?.trim() || !body.issue?.trim() || !isOrderStatus(body.status)) {
     return NextResponse.json({ error: "Completá los campos obligatorios" }, { status: 400 });
   }
+  if (body.customer_name.trim().split(/\s+/).length < 2) {
+    return NextResponse.json({ error: "Ingresá el nombre y apellido del cliente" }, { status: 400 });
+  }
   try {
     const order = await createOrder({
       customer_name: body.customer_name.trim(), customer_phone: body.customer_phone.trim(),

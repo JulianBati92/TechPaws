@@ -103,3 +103,12 @@ export async function findOrderToken(orderNumber: number, accessCode: string) {
   const rows = await database()`SELECT public_token FROM orders WHERE order_number=${orderNumber} AND access_code=${accessCode}` as unknown as { public_token: string }[];
   return rows[0]?.public_token ?? null;
 }
+
+export async function findOrderTokenByCustomer(customerName: string, phoneLast4: string) {
+  await ensureSchema();
+  const rows = await database()`SELECT public_token FROM orders
+    WHERE LOWER(TRIM(customer_name)) = LOWER(TRIM(${customerName}))
+      AND RIGHT(REGEXP_REPLACE(customer_phone, '[^0-9]', '', 'g'), 4) = ${phoneLast4}
+    ORDER BY updated_at DESC LIMIT 1` as unknown as { public_token: string }[];
+  return rows[0]?.public_token ?? null;
+}

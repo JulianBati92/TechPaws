@@ -12,6 +12,12 @@ export default function AdminDashboard() {
   const [filter, setFilter] = useState(""); const [message, setMessage] = useState(""); const [busy, setBusy] = useState(false); const router = useRouter();
   async function load() { const r = await fetch("/api/admin/orders", { cache:"no-store" }); if (r.status===401) return router.replace("/admin/login"); const data=await r.json(); setOrders(data.orders || []); if (!r.ok) setMessage(data.error); }
   useEffect(() => { void load(); }, []);
+  useEffect(() => {
+    const input = document.querySelector<HTMLInputElement>(".order-create input");
+    const label = input?.closest("label");
+    if (input) { input.placeholder = "Ej. Juan Pérez"; input.autocomplete = "name"; }
+    if (label?.firstChild) label.firstChild.textContent = "Nombre y apellido *";
+  }, []);
   const visible = useMemo(() => orders.filter(o => `${o.order_number} ${o.customer_name} ${o.equipment}`.toLowerCase().includes(filter.toLowerCase())), [orders, filter]);
   async function create(e: React.FormEvent) { e.preventDefault(); setBusy(true); setMessage(""); const r=await fetch("/api/admin/orders",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(draft)}); const data=await r.json(); setBusy(false); if(!r.ok)return setMessage(data.error); setDraft(empty); setMessage(`Orden #${data.order.order_number} creada correctamente.`); await load(); }
   async function save(order: Order) { setBusy(true); const r=await fetch(`/api/admin/orders/${order.id}`,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify(order)}); const data=await r.json(); setBusy(false); setMessage(r.ok?`Orden #${order.order_number} actualizada.`:data.error); if(r.ok) await load(); }

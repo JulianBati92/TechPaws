@@ -42,3 +42,5 @@ El proyecto está preparado para Vercel y utiliza Neon Postgres para guardar las
 
 - Panel privado: `/admin`
 - Consulta para clientes: `/seguimiento`
+
+Si un cliente olvida su número de orden, también puede consultar con el nombre y apellido exactos registrados y los últimos cuatro dígitos de su WhatsApp.
