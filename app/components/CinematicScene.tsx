@@ -39,7 +39,7 @@ export default function CinematicScene() {
         y: Math.random() * height,
         vx: (Math.random() - 0.5) * 0.12,
         vy: (Math.random() - 0.5) * 0.12,
-        r: index % 9 === 0 ? 1.8 : 0.75,
+        r: index % 9 === 0 ? 2.1 : 1,
         phase: Math.random() * Math.PI * 2,
       }));
     };
@@ -80,10 +80,10 @@ export default function CinematicScene() {
           const dx = point.x - other.x;
           const dy = point.y - other.y;
           const distance = Math.hypot(dx, dy);
-          if (distance < 115) {
+          if (distance < 145) {
             context.beginPath();
-            context.strokeStyle = `rgba(54,123,232,${(1 - distance / 115) * 0.12})`;
-            context.lineWidth = 0.55;
+            context.strokeStyle = `rgba(65,142,255,${(1 - distance / 145) * 0.24})`;
+            context.lineWidth = 0.7;
             context.moveTo(point.x, point.y);
             context.lineTo(other.x, other.y);
             context.stroke();
@@ -130,7 +130,7 @@ export default function CinematicScene() {
   return <>
     <div className={`cin-preloader ${loaded ? "is-done" : ""}`} aria-hidden="true"><div className="cin-pre-mark"><span className="cin-paw"><i /><i /><i /><i /><b /></span></div><p>TECHPAWS · INICIANDO SISTEMA</p><div className="cin-pre-track"><i /></div><small>DIAGNÓSTICO DIGITAL</small></div>
     <canvas ref={canvasRef} className="cin-canvas" aria-hidden="true" />
-    <div className="cin-grain" aria-hidden="true" />
+    <div className="cin-tech-grid" aria-hidden="true" />
     <div className="cin-vignette" aria-hidden="true" />
     <div className="cin-progress" aria-hidden="true"><i /></div>
   </>;

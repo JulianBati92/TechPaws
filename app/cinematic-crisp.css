@@ -1,0 +1,9 @@
+/* Crisp technical layer: replaces the cloudy film grain. */
+.cin-grain{display:none!important}
+.cin-tech-grid{position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.36;background-image:linear-gradient(rgba(61,131,238,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(61,131,238,.11) 1px,transparent 1px),radial-gradient(circle,rgba(95,164,255,.58) 1px,transparent 1.5px);background-size:72px 72px,72px 72px,144px 144px;mask-image:radial-gradient(ellipse 85% 72% at 50% 44%,#000 14%,transparent 84%)}
+.cin-vignette{background:radial-gradient(120% 90% at 50% 40%,transparent 54%,rgba(0,2,5,.42) 100%)}
+.cin-hero{background:linear-gradient(90deg,rgba(3,6,10,.98) 0%,rgba(3,6,10,.78) 38%,rgba(3,6,10,.13) 70%,rgba(3,6,10,.22) 100%)}
+.cin-hero:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.44;background-image:linear-gradient(rgba(64,139,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(64,139,255,.13) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,#000,transparent 62%)}
+.cin-hero-visual img{filter:saturate(.98) contrast(1.2) brightness(.92)}
+.cin-scan{opacity:.3;box-shadow:0 0 8px #2378ff}
+@media(max-width:720px){.cin-tech-grid{opacity:.2;background-size:54px 54px,54px 54px,108px 108px}.cin-hero:after{opacity:.24;background-size:48px 48px}}
