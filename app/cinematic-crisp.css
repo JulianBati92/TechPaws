@@ -18,3 +18,68 @@
 /* Pantalla de carga con presencia real y lectura inmediata. */
 .cin-preloader{row-gap:0}.cin-pre-mark{width:112px;height:112px;margin-bottom:34px;border-width:2px;box-shadow:0 0 90px rgba(35,120,255,.34)}.cin-pre-mark .cin-paw{transform:scale(1.75)}.cin-preloader p{font-size:16px;letter-spacing:3px;margin:0 0 18px}.cin-pre-track{width:min(520px,76vw);height:3px}.cin-preloader small{font-size:11px;letter-spacing:3px;margin-top:18px}
 @media(max-width:720px){.cin-pre-mark{width:92px;height:92px;margin-bottom:28px}.cin-pre-mark .cin-paw{transform:scale(1.4)}.cin-preloader p{font-size:13px;letter-spacing:2px}.cin-pre-track{width:min(380px,78vw);height:2px}.cin-preloader small{font-size:10px;letter-spacing:2px}}
+
+/* Lectura cómoda: ningún texto informativo queda perdido en gris oscuro. */
+.cin-hero-copy>p:last-of-type,
+.cin-section-intro>p,
+.cin-services-grid small,
+.cin-method-copy>p:not(.cin-eyebrow),
+.cin-benefit-list p,
+.cin-about-copy>p:not(.cin-eyebrow),
+.cin-contact-copy>p:not(.cin-eyebrow){color:#b8c5d8}
+.cin-services-grid small{font-size:16px;line-height:1.65}
+.cin-method-copy>p:not(.cin-eyebrow),
+.cin-about-copy>p:not(.cin-eyebrow),
+.cin-contact-copy>p:not(.cin-eyebrow){font-size:17px;line-height:1.7}
+.cin-benefit-list p{font-size:16px;line-height:1.6;color:#aebcd0}
+.cin-chapter-links small{font-size:14px;color:#9eacc0}
+.cin-service-number,.cin-media-meta{font-size:12px;color:#91a2ba}
+.cin-footer>p,.cin-footer>small{font-size:11px;color:#8696ad}
+
+/* Responsive completo para tablet y celular. */
+@media(max-width:900px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .cin-nav{height:72px;padding:0 16px;gap:14px}
+  .cin-nav nav{display:none}
+  .cin-brand{min-width:0}.cin-brand b{font-size:13px;letter-spacing:1.4px}.cin-brand small{font-size:8px;letter-spacing:1.2px}
+  .cin-nav-cta{margin-left:auto;padding:12px 14px;gap:10px;font-size:10px;white-space:nowrap}
+  .cin-hero{min-height:100svh;padding:72px 18px 28px}
+  .cin-hero-visual{inset:0 -44% 0 -5%;opacity:.38}
+  .cin-hero-copy{margin-top:76px;max-width:100%}
+  .cin-hero h1{font-size:clamp(54px,16vw,84px);line-height:.86;letter-spacing:-.06em;margin:24px 0 30px}
+  .cin-hero-copy>p:last-of-type{font-size:17px;line-height:1.6;max-width:34rem}
+  .cin-actions{flex-direction:column;align-items:stretch;gap:18px;margin-top:30px}
+  .cin-actions a:first-child{width:100%;min-width:0;padding:18px 20px}
+  .cin-actions a:last-child{align-self:flex-start;font-size:13px}
+  .cin-hero-bottom{margin-top:64px;padding-bottom:0}
+  .cin-hero-bottom>p{display:none}
+  .cin-chapter-links{grid-template-columns:1fr 1fr;gap:18px 12px;padding-top:20px}
+  .cin-chapter-links a{gap:10px}.cin-chapter-links b{font-size:28px}.cin-chapter-links span{font-size:11px}.cin-chapter-links small{font-size:13px;line-height:1.35}
+  .cin-chapter{width:100%;min-height:0;padding:82px 18px}
+  .cin-section-intro{grid-template-columns:1fr;gap:18px;margin-bottom:38px}
+  .cin-section-intro h2,.cin-method h2,.cin-about h2,.cin-contact h2{font-size:clamp(44px,13vw,68px);line-height:.94;letter-spacing:-.055em;margin:20px 0}
+  .cin-section-intro>p{font-size:17px;line-height:1.65}
+  .cin-services-grid{grid-template-columns:1fr;border-left:1px solid var(--cin-line)}
+  .cin-services-grid article{min-height:355px;padding:28px 24px}
+  .cin-services-grid h3{font-size:28px;max-width:none}.cin-services-grid small{font-size:16px}.cin-services-grid a{left:24px;font-size:13px}
+  .cin-method,.cin-about,.cin-contact{display:grid;grid-template-columns:minmax(0,1fr);gap:46px;align-items:start}
+  .cin-method-media{min-height:0;height:auto;aspect-ratio:1/1;order:2;width:100%;clip-path:none}
+  .cin-method-media img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
+  .cin-method-copy{order:1;min-width:0}
+  .cin-benefit-list{margin-top:30px}.cin-benefit-list article{grid-template-columns:34px minmax(0,1fr);gap:12px;padding:20px 0}.cin-benefit-list h3{font-size:19px}.cin-benefit-list p{font-size:16px}
+  .cin-about-copy{min-width:0}.cin-about-media{min-height:0;height:auto;aspect-ratio:1/1;width:100%;place-items:center}.cin-about-media img{width:100%;height:100%;max-height:none;object-fit:contain}.cin-orbit{width:min(88vw,520px)}
+  .cin-values{gap:8px;margin:26px 0}.cin-values span{font-size:11px;letter-spacing:1px;padding:10px 11px}.cin-about-note{font-size:16px}
+  .cin-contact-copy{min-width:0}.cin-contact-data{margin-top:30px}.cin-contact-data>a,.cin-contact-data>div{grid-template-columns:1fr;gap:7px;padding:17px 0}.cin-contact-data span{font-size:11px}.cin-contact-data b{font-size:16px;overflow-wrap:anywhere}
+  .cin-contact .contact-form{width:100%;min-width:0;padding:28px 20px}.field-row{grid-template-columns:1fr;gap:0}.contact-form label{font-size:13px}.contact-form input,.contact-form select,.contact-form textarea{font-size:16px}.form-note{font-size:12px;line-height:1.5}
+  .cin-footer{grid-template-columns:1fr;padding:34px 20px}.cin-footer>div{flex-wrap:wrap;gap:16px 22px}.cin-footer a{font-size:14px}.cin-floating{display:grid}
+}
+
+@media(max-width:420px){
+  .cin-brand small{display:none}.cin-nav-cta{font-size:9px;padding:11px 10px}.cin-nav-cta span{display:none}
+  .cin-hero{padding-inline:16px}.cin-hero h1{font-size:clamp(50px,16vw,68px)}
+  .cin-chapter-links{grid-template-columns:1fr}.cin-chapter-links a{padding:6px 0}
+  .cin-chapter{padding:72px 16px}.cin-section-intro h2,.cin-method h2,.cin-about h2,.cin-contact h2{font-size:clamp(40px,13vw,56px)}
+  .cin-services-grid article{padding:26px 20px}.cin-services-grid a{left:20px}
+  .cin-method-media,.cin-about-media{aspect-ratio:4/5}.cin-about-label{right:0;bottom:0;max-width:90%}
+  .cin-contact .contact-form{padding:25px 16px}
+}
