@@ -7,3 +7,10 @@
 .cin-hero-visual img{filter:saturate(.98) contrast(1.2) brightness(.92)}
 .cin-scan{opacity:.3;box-shadow:0 0 8px #2378ff}
 @media(max-width:720px){.cin-tech-grid{opacity:.2;background-size:54px 54px,54px 54px,108px 108px}.cin-hero:after{opacity:.24;background-size:48px 48px}}
+
+/* Texto auxiliar legible sin perder la estética técnica. */
+.cin-nav nav a,.cin-nav-cta{font-size:11px}.cin-brand b{font-size:14px}.cin-brand small{font-size:9px}.cin-eyebrow{font-size:11px;letter-spacing:.19em}.cin-chapter-links span{font-size:11px}.cin-chapter-links small{font-size:12px}.cin-hero-bottom>p,.cin-hero-scroll-cue{font-size:10px}.cin-section-intro>p{font-size:16px;line-height:1.7}.cin-service-number{font-size:11px}.cin-services-grid article>.cin-eyebrow{font-size:10px}.cin-services-grid article>p{font-size:14px;line-height:1.55}.cin-services-grid a{font-size:12px}.cin-media-meta{font-size:10px}.cin-method-copy>p,.cin-about-copy>p{font-size:15px;line-height:1.7}.cin-benefit-list article>b{font-size:10px}.cin-benefit-list h3{font-size:18px}.cin-benefit-list p{font-size:14px;line-height:1.5}.cin-values span{font-size:10px}.cin-about-note{font-size:15px;line-height:1.55}.cin-about-label span{font-size:10px}.cin-contact-data span{font-size:10px}.cin-contact-data b{font-size:14px}.cin-footer{font-size:10px}.cin-footer a{font-size:12px}
+
+/* La escena de reparación se integra como un recorte, igual que precursores. */
+.cin-method-media{background:transparent;overflow:visible}.cin-method-media:before,.cin-method-media:after{display:none}.cin-method-media img{object-fit:contain;filter:drop-shadow(0 24px 48px rgba(0,20,48,.42))}
+@media(max-width:720px){.cin-eyebrow{font-size:10px}.cin-chapter-links span{font-size:10px}.cin-chapter-links small{font-size:11px}.cin-services-grid article>p,.cin-benefit-list p{font-size:13px}}
