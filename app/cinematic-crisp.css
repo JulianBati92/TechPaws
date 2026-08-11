@@ -112,3 +112,49 @@
   .cin-services-grid article .cin-service-number{left:20px}
   .cin-services-grid article>a{right:16px}
 }
+
+/* Mobile final: composición compacta diseñada para una sola mano. */
+@media(max-width:600px){
+  .cin-nav{height:64px;padding:0 12px;background:rgba(2,6,11,.96);backdrop-filter:blur(14px);border-bottom-color:rgba(114,163,232,.18)}
+  .cin-brand{gap:8px}.cin-brand img{width:34px;height:34px}.cin-brand b{font-size:11px;letter-spacing:1.1px}.cin-brand small{display:none}
+  .cin-nav-cta{font-size:0!important;min-width:96px;justify-content:center;padding:10px 13px!important;border-color:rgba(92,151,239,.5)}
+  .cin-nav-cta::before{content:"Contacto"!important;font:600 11px 'Space Grotesk'!important;letter-spacing:1px;color:#fff}
+  .cin-nav-cta span{display:none}
+
+  .cin-hero{min-height:auto;padding:64px 14px 24px}
+  .cin-hero-visual{inset:64px -65% 0 -18%;opacity:.32}.cin-hero-visual:after{background:linear-gradient(90deg,#03060a 0%,rgba(3,6,10,.65) 68%,transparent),linear-gradient(0deg,#03060a 0%,transparent 36%)}
+  .cin-hero-copy{margin-top:74px}.cin-eyebrow{font-size:10px;letter-spacing:.14em}
+  .cin-hero h1{font-size:clamp(48px,15.5vw,66px);line-height:.88;margin:18px 0 24px;letter-spacing:-.055em}
+  .cin-hero-copy>p:last-of-type{font-size:16px;line-height:1.58}
+  .cin-actions{margin-top:24px;gap:17px}.cin-actions a:first-child{min-height:52px;align-items:center;font-size:12px}.cin-actions a:last-child{font-size:12px}
+  .cin-hero-bottom{margin-top:46px}.cin-chapter-links{grid-template-columns:1fr 1fr!important;gap:10px;border-top-color:rgba(111,155,218,.2)}
+  .cin-chapter-links a{display:flex!important;min-width:0;padding:10px 0!important}.cin-chapter-links a:nth-child(n+3){display:none!important}
+  .cin-chapter-links b{font-size:24px}.cin-chapter-links span{font-size:9px;letter-spacing:1px}.cin-chapter-links small{font-size:11px;margin-top:3px}
+
+  .cin-chapter{padding:62px 14px}.cin-section-intro{gap:14px;margin-bottom:28px}
+  .cin-section-intro h2,.cin-method h2,.cin-about h2,.cin-contact h2{font-size:clamp(38px,12vw,52px);line-height:.98;margin:15px 0}
+  .cin-section-intro>p{font-size:16px;line-height:1.58}
+
+  .cin-services-grid{gap:12px;border:0;background:transparent}
+  .cin-services-grid article{min-height:300px;padding:104px 18px 24px;border:1px solid rgba(117,157,211,.24);border-radius:2px;background:#07101b}
+  .cin-services-grid article::after{opacity:.42;background-size:cover;background-position:center right}
+  .cin-services-grid article:hover{transform:none}.cin-services-grid article:hover::after{transform:none;opacity:.42}
+  .cin-services-grid article .cin-service-number{top:19px;left:18px;font-size:11px}
+  .cin-services-grid article>a{top:14px;right:14px;padding:9px 12px;font-size:11px}
+  .cin-services-grid .cin-service-node{display:none}
+  .cin-services-grid article>p{font-size:11px;letter-spacing:1.3px;margin:0 0 10px}
+  .cin-services-grid h3{font-size:25px;line-height:1.05;margin:0 0 12px;max-width:92%}
+  .cin-services-grid small{font-size:15px;line-height:1.5;max-width:92%}
+
+  .cin-method,.cin-about,.cin-contact{gap:34px}.cin-method-media,.cin-about-media{aspect-ratio:1/1;min-height:0}
+  .cin-media-meta{left:8px;right:8px;bottom:5px;font-size:9px}.cin-benefit-list{margin-top:24px}.cin-benefit-list article{padding:17px 0}.cin-benefit-list h3{font-size:18px}.cin-benefit-list p{font-size:15px}
+  .cin-values span{font-size:10px}.cin-about-note{font-size:15px;padding-left:16px}.cin-about-label{padding:10px 12px}.cin-about-label span{font-size:9px}
+  .cin-contact-copy>p:not(.cin-eyebrow){font-size:16px}.cin-contact-data b{font-size:15px}.cin-contact .contact-form{padding:22px 16px}.contact-form button{min-height:52px}
+  .cin-footer{padding:30px 16px}.cin-footer .cin-brand{display:none}.cin-footer a{font-size:13px}
+  .cin-floating{width:52px;height:52px;right:14px;bottom:14px}
+}
+
+@media(max-width:340px){
+  .cin-nav-cta{min-width:86px}.cin-hero h1{font-size:45px}.cin-chapter-links{grid-template-columns:1fr!important}.cin-chapter-links a:nth-child(2){display:none!important}
+  .cin-services-grid article{min-height:315px}.cin-services-grid h3{font-size:23px}.cin-services-grid small{font-size:14px}
+}
