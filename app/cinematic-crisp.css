@@ -192,3 +192,38 @@
   .cin-method-media{aspect-ratio:1/1!important;padding:12px 20px 38px}
   .cin-method-media img{transform:scale(.88)}
 }
+
+/* Stable hero framing: never zoom or push the PC and mascot outside the viewport. */
+.cin-home .cin-hero .cin-hero-visual{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  opacity:1!important;
+  overflow:hidden;
+}
+.cin-home .cin-hero .cin-hero-visual img{
+  position:absolute!important;
+  inset:0!important;
+  display:block;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:right center!important;
+  animation:none!important;
+  transform:none!important;
+}
+.cin-home .cin-hero .cin-hero-visual::after{
+  background:linear-gradient(90deg,#03060a 0%,rgba(3,6,10,.9) 22%,rgba(3,6,10,.22) 48%,transparent 68%)!important;
+}
+.cin-home .cin-hero .cin-hero-shade{
+  background:linear-gradient(180deg,rgba(2,5,9,.18),transparent 72%,rgba(2,5,9,.72))!important;
+}
+
+@media(max-width:900px){
+  .cin-home .cin-hero .cin-hero-visual img{object-position:center top!important}
+  .cin-home .cin-hero .cin-hero-visual::after{
+    background:linear-gradient(180deg,rgba(3,6,10,.06) 0%,rgba(3,6,10,.18) 42%,#03060a 76%)!important;
+  }
+}
