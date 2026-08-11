@@ -1,5 +1,6 @@
 import ContactForm from "./components/ContactForm";
 import CinematicScene from "./components/CinematicScene";
+import MobileMenu from "./components/MobileMenu";
 
 const services = [
   ["01", "Reparación integral", "PCs y notebooks", "Diagnóstico y solución de fallas de hardware y software, explicadas con claridad."],
@@ -26,6 +27,7 @@ export default function Home() {
       <a className="cin-brand" href="#inicio"><img src="/logo-techpaws.png" alt="" /><span><b>TECHPAWS</b><small>MICROINFORMÁTICA</small></span></a>
       <nav aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#metodo">Método</a><a href="#precursores">Nosotros</a><a href="/seguimiento">Mi orden</a></nav>
       <a className="cin-nav-cta" href="#contacto">Pedir diagnóstico <span>↗</span></a>
+      <MobileMenu />
     </header>
 
     <section className="cin-hero" id="inicio" data-chapter="00">
