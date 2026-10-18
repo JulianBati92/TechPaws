@@ -39,7 +39,7 @@ export default function Home() {
 
     <section className="void-section void-services" id="servicios" data-chapter="01"><div className="void-wrap">
       <div className="void-heading" data-reveal><div><p className="void-kicker">01 · Detectar</p><h2>Todo empieza<br />por entender.</h2></div><p>No reemplazamos piezas por intuición. Evaluamos el equipo, identificamos la causa y te contamos qué encontramos antes de avanzar.</p></div>
-      <div className="void-service-list">{services.map((service, index) => <article className={index % 2 ? "is-reverse" : ""} key={service.number} data-reveal><div className="void-service-image"><img src={service.image} alt="" loading="lazy" /><span>{service.number}</span></div><div className="void-service-copy"><p className="void-kicker">{service.eyebrow}</p><h3>{service.title}</h3><p>{service.text}</p><a className="void-link" href="#contacto">Consultar <span>↗</span></a></div></article>)}</div>
+      <div className="void-service-list">{services.map((service) => <article key={service.number} data-reveal><div className="void-service-image"><img src={service.image} alt="" loading="lazy" /><span>{service.number}</span></div><div className="void-service-copy"><p className="void-kicker">{service.eyebrow}</p><h3>{service.title}</h3><p>{service.text}</p><a className="void-link" href="#contacto">Consultar <span>↗</span></a></div></article>)}</div>
     </div></section>
 
     <section className="void-section void-method" id="metodo" data-chapter="02"><div className="void-wrap void-split">

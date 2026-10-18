@@ -11,3 +11,22 @@
 @media(max-width:820px){.void-wrap{width:calc(100% - 36px)}.void-nav{position:absolute;width:calc(100% - 36px);height:78px}.void-nav>nav,.void-nav-cta{display:none}.void-nav .cin-mobile-menu{display:block;margin-left:auto}.void-nav .cin-menu-toggle{display:grid;position:relative;inset:auto}.void-nav .cin-mobile-menu>nav{background:#000;border-left:0}.void-hero{padding-top:112px}.void-hero-grid{grid-template-columns:1fr}.void-hero h1{font-size:clamp(58px,12vw,88px);max-width:760px}.void-hero-art{aspect-ratio:16/10}.void-steps{grid-template-columns:1fr 1fr}.void-heading,.void-split,.void-about .void-split,.void-contact-grid{grid-template-columns:1fr}.void-heading{gap:40px;margin-bottom:80px}.void-service-list article,.void-service-list article.is-reverse{grid-template-columns:1fr;gap:34px}.void-service-list article.is-reverse .void-service-image{order:0}.void-service-copy{max-width:650px}.void-method-copy{order:-1}.void-cutout{width:min(680px,100%);margin-inline:auto}.void-footer>.void-wrap{grid-template-columns:1fr auto}.void-footer p{display:none}}
 @media(max-width:560px){.void-wrap{width:calc(100% - 32px)}.void-section{padding:96px 0}.void-brand img{width:38px;height:38px}.void-brand>span{font-size:15px}.void-hero{min-height:auto;padding:110px 0 34px}.void-hero h1{font-size:clamp(52px,15vw,72px);line-height:.9}.void-hero h1 em{margin-top:12px}.void-lead,.void-heading>p,.void-service-copy>p:not(.void-kicker){font-size:16px}.void-actions{align-items:flex-start;flex-direction:column;gap:22px}.void-actions .void-button{width:100%}.void-hero-art{aspect-ratio:4/3}.void-hero-art figcaption{left:16px;right:16px;bottom:14px;font-size:9px}.void-steps{gap:24px 12px;margin-top:44px}.void-steps b{font-size:23px}.void-steps small{font-size:11px}.void-home h2{font-size:clamp(48px,14vw,65px)}.void-heading{margin-bottom:64px}.void-service-list{gap:82px}.void-service-image{aspect-ratio:4/3;border-radius:18px}.void-service-copy h3{font-size:40px}.void-split{gap:58px}.void-values{gap:7px}.void-contact-data>a,.void-contact-data>div{grid-template-columns:88px 1fr;gap:8px}.void-contact-data b{overflow-wrap:anywhere;font-size:14px}.void-form .contact-form{padding:28px 20px;border-radius:18px}.void-footer>.void-wrap{grid-template-columns:1fr}.void-footer nav{flex-wrap:wrap}.void-floating{right:16px;bottom:16px;width:52px;height:52px}}
 @media(prefers-reduced-motion:reduce){.void-home [data-reveal]{opacity:1;transform:none;transition:none}}
+
+/* Second composition: closer to the spacious reference, without a page-long service sequence. */
+@media(min-width:821px){
+  .void-hero-grid{grid-template-columns:minmax(0,.95fr) minmax(460px,1.05fr);gap:clamp(44px,6vw,90px)}
+  .void-heading{margin-bottom:84px}
+  .void-service-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:86px 56px}
+  .void-service-list article,.void-service-list article.is-reverse{display:flex;min-width:0;flex-direction:column;gap:28px}
+  .void-service-list article.is-reverse .void-service-image{order:0}
+  .void-service-copy h3{margin-bottom:18px;font-size:clamp(34px,3.5vw,50px)}
+}
+.void-hero-art{border-radius:0;background:#000;mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 92%,transparent 100%)}
+.void-hero-art:after{background:linear-gradient(90deg,rgba(0,0,0,.48),transparent 38%),linear-gradient(0deg,#000 0,transparent 27%)}
+.void-form .contact-form{padding:0;border-radius:0;background:transparent;color:#fff}
+.void-form .contact-form-head span{color:var(--saffron)}
+.void-form .contact-form input,.void-form .contact-form select,.void-form .contact-form textarea{border-color:#363636;color:#fff;font-size:15px}
+.void-form .contact-form input::placeholder,.void-form .contact-form textarea::placeholder{color:#777}
+.void-form .contact-form select{background:#000}.void-form .contact-form label{color:#bdbdbd}.void-form .contact-form-intro,.void-form .form-note{color:#888}
+@media(max-width:820px){.void-service-list{grid-template-columns:1fr;gap:82px}.void-service-list article{display:flex;flex-direction:column;gap:28px}}
+@media(max-width:560px){.void-form .contact-form{padding:0;border-radius:0}}
