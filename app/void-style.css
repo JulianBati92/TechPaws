@@ -45,3 +45,33 @@
 @media(max-width:1100px){.void-hero-grid{grid-template-columns:minmax(360px,.9fr) minmax(470px,1.1fr)}.void-hero h1{font-size:clamp(62px,7vw,80px)}}
 @media(max-width:820px){.void-hero-grid,.void-contact-grid{grid-template-columns:1fr}.void-hero-art{aspect-ratio:3/2}.void-contact h2{font-size:clamp(50px,12vw,68px)}}
 @media(max-width:560px){.void-hero-art{aspect-ratio:3/2;margin-inline:-10px}.void-hero h1{font-size:clamp(54px,16vw,70px)}}
+
+/* Compact vertical rhythm: remove dead space after the hero and reduce the footer. */
+.void-hero{min-height:0;padding-bottom:72px}
+.void-hero+.void-services{padding-top:82px}
+.void-steps{margin-top:42px}
+.void-footer{padding:32px 0 22px}
+.void-footer>.void-wrap{grid-template-columns:auto 1fr auto auto;gap:28px}
+.void-footer p{margin:0;text-align:center}
+.void-footer small{grid-column:auto;color:#656565;white-space:nowrap}
+@media(max-width:820px){.void-hero{padding-bottom:56px}.void-hero+.void-services{padding-top:72px}.void-footer>.void-wrap{grid-template-columns:1fr auto}.void-footer small{grid-column:1/-1}.void-footer nav{justify-content:flex-end}}
+@media(max-width:560px){.void-hero{padding-bottom:44px}.void-hero+.void-services{padding-top:64px}.void-steps{margin-top:34px}.void-footer{padding:28px 0 20px}.void-footer>.void-wrap{gap:20px}.void-footer nav{justify-content:flex-start}.void-footer small{grid-column:1/-1}}
+
+/* Restore the original hero composition: copy left, artwork integrated on the right. */
+@media(min-width:821px){
+  .void-hero{padding-top:118px}
+  .void-hero-grid{position:relative;display:block;min-height:560px}
+  .void-hero-copy{display:flex;min-height:560px;width:49%;flex-direction:column;justify-content:center;padding:24px 0 42px}
+  .void-hero h1{max-width:600px;margin-bottom:26px;font-size:clamp(66px,5.8vw,88px)}
+  .void-hero-copy>.void-lead{max-width:520px}
+  .void-hero-art{position:absolute;z-index:0;top:0;right:-3%;width:64%;height:100%;aspect-ratio:auto;margin:0}
+  .void-hero-art img{width:100%;height:100%;object-fit:contain;object-position:right center}
+  .void-hero-art figcaption{right:5%;left:20%;bottom:48px}
+  .void-steps{position:relative;z-index:3;margin-top:8px}
+}
+@media(min-width:821px) and (max-width:1100px){
+  .void-hero-grid,.void-hero-copy{min-height:500px}
+  .void-hero-copy{width:52%}
+  .void-hero h1{font-size:clamp(60px,7vw,74px)}
+  .void-hero-art{right:-5%;width:61%}
+}
