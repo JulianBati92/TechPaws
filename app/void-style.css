@@ -30,3 +30,18 @@
 .void-form .contact-form select{background:#000}.void-form .contact-form label{color:#bdbdbd}.void-form .contact-form-intro,.void-form .form-note{color:#888}
 @media(max-width:820px){.void-service-list{grid-template-columns:1fr;gap:82px}.void-service-list article{display:flex;flex-direction:column;gap:28px}}
 @media(max-width:560px){.void-form .contact-form{padding:0;border-radius:0}}
+
+/* Image and proportion correction after visual review. */
+.void-hero-grid{grid-template-columns:minmax(420px,.82fr) minmax(600px,1.18fr)}
+.void-hero h1{max-width:590px;font-size:clamp(68px,6.2vw,92px);line-height:.9}
+.void-hero-art{aspect-ratio:3/2;overflow:visible;mask-image:radial-gradient(ellipse 72% 78% at 58% 50%,#000 58%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 72% 78% at 58% 50%,#000 58%,transparent 100%)}
+.void-hero-art:after{inset:-2px;background:linear-gradient(90deg,#000 0,transparent 27%),linear-gradient(0deg,#000 0,transparent 24%),linear-gradient(180deg,#000 0,transparent 18%)}
+.void-hero-art img{object-fit:contain;object-position:center}
+.void-contact-grid{grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);align-items:center}
+.void-contact h2{font-size:clamp(58px,5.6vw,80px)}
+.void-form .contact-form{border:0;box-shadow:none}
+.void-form .contact-form input,.void-form .contact-form select,.void-form .contact-form textarea{padding:14px 0;border:0;border-bottom:1px solid #363636;background:transparent;color:#fff;box-shadow:none}
+.void-form .contact-form input:focus,.void-form .contact-form select:focus,.void-form .contact-form textarea:focus{border-color:var(--iris);box-shadow:none}
+@media(max-width:1100px){.void-hero-grid{grid-template-columns:minmax(360px,.9fr) minmax(470px,1.1fr)}.void-hero h1{font-size:clamp(62px,7vw,80px)}}
+@media(max-width:820px){.void-hero-grid,.void-contact-grid{grid-template-columns:1fr}.void-hero-art{aspect-ratio:3/2}.void-contact h2{font-size:clamp(50px,12vw,68px)}}
+@media(max-width:560px){.void-hero-art{aspect-ratio:3/2;margin-inline:-10px}.void-hero h1{font-size:clamp(54px,16vw,70px)}}
