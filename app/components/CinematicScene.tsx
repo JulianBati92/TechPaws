@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Point = { x: number; y: number; vx: number; vy: number; r: number; phase: number };
+type Point = { x: number; y: number; vx: number; vy: number; r: number; phase: number; color: string };
 
 export default function CinematicScene() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -34,6 +34,7 @@ export default function CinematicScene() {
       canvas.style.height = `${height}px`;
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
       const count = Math.max(34, Math.min(88, Math.floor(width / 18)));
+      const colors = ["128,82,255", "255,184,41", "21,132,110", "226,74,182", "76,139,255"];
       points = Array.from({ length: count }, (_, index) => ({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -41,6 +42,7 @@ export default function CinematicScene() {
         vy: (Math.random() - 0.5) * 0.12,
         r: index % 9 === 0 ? 2.1 : 1,
         phase: Math.random() * Math.PI * 2,
+        color: colors[index % colors.length],
       }));
     };
 
@@ -54,7 +56,7 @@ export default function CinematicScene() {
     const draw = (time: number) => {
       context.clearRect(0, 0, width, height);
       const glow = context.createRadialGradient(pointerX * width, pointerY * height, 0, pointerX * width, pointerY * height, Math.max(width, height) * 0.5);
-      glow.addColorStop(0, "rgba(22,103,255,.12)");
+      glow.addColorStop(0, "rgba(128,82,255,.1)");
       glow.addColorStop(1, "rgba(3,7,13,0)");
       context.fillStyle = glow;
       context.fillRect(0, 0, width, height);
@@ -71,9 +73,13 @@ export default function CinematicScene() {
         }
         const pulse = 0.65 + Math.sin(time * 0.001 + point.phase) * 0.3;
         context.beginPath();
-        context.fillStyle = index % 9 === 0 ? `rgba(55,137,255,${pulse})` : `rgba(164,198,255,${pulse * 0.42})`;
-        context.arc(point.x, point.y, point.r, 0, Math.PI * 2);
-        context.fill();
+        context.strokeStyle = `rgba(${point.color},${index % 9 === 0 ? pulse : pulse * 0.5})`;
+        context.lineWidth = index % 9 === 0 ? 1.3 : 0.8;
+        context.moveTo(point.x, point.y - point.r * 2.2);
+        context.lineTo(point.x + point.r * 2, point.y + point.r * 1.6);
+        context.lineTo(point.x - point.r * 2, point.y + point.r * 1.6);
+        context.closePath();
+        context.stroke();
 
         for (let otherIndex = index + 1; otherIndex < points.length; otherIndex += 1) {
           const other = points[otherIndex];
@@ -82,7 +88,7 @@ export default function CinematicScene() {
           const distance = Math.hypot(dx, dy);
           if (distance < 145) {
             context.beginPath();
-            context.strokeStyle = `rgba(65,142,255,${(1 - distance / 145) * 0.24})`;
+            context.strokeStyle = `rgba(${point.color},${(1 - distance / 145) * 0.12})`;
             context.lineWidth = 0.7;
             context.moveTo(point.x, point.y);
             context.lineTo(other.x, other.y);
